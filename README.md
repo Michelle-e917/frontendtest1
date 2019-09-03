@@ -1,2 +1,2 @@
 # frontendtest1
-Exercise about front end using css, ajax, json and javascript
+Exercise about frontend using css, ajax, json and javascript
