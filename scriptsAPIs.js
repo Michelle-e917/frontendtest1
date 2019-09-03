@@ -28,10 +28,10 @@ request.onload = function () {
 	request2.open('GET', 'https://jsonplaceholder.typicode.com/users?id='+userID, true);
 	request2.onload = function () {
 	
-	contenidosRecibidos = request2.responseText.split(",");
-	userName= contenidosRecibidos[1];
-	contenidosRecibidos = userName.split(":");
-	userName = contenidosRecibidos[1];
+	var obj = JSON.parse(this.responseText);
+	for (x in obj) {
+     		userName = obj[x].name;
+    	}
 
 	  
 	url = 'https://joeschmoe.io/api/v1/'+userName;
